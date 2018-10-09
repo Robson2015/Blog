@@ -1,0 +1,7 @@
+@import "compass/css3";
+
+@media all and (max-width: $container-phone) {
+  .container {
+    max-width:$container-xs;
+  }
+}

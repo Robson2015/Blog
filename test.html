@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Accès limité</title>
+<SCRIPT LANGUAGE="JavaScript">
+/*Fonction verifier formulaire*/
+function verifForm()
+{
+    if(document.getElementById('identifiant').value !='' && document.getElementById('identifiant').value!='' && document.getElementById('identifiant').value !='Identifiant...' && document.getElementById('identifiant').value != 'Code secret...')
+    {
+        document.getElementById('bouton').disabled=false;
+ 
+    }
+}
+</script>
+<link href="connecte/style.css" rel="stylesheet" type="text/css" />
+</head>
+ 
+<body onload="verifForm(form1)">
+<p class="acces_reserve">L'accès a ce site est limité</p>
+<p>&nbsp;</p>
+<form id="form1" name="form1" method="post" action="">
+  <table width="300" height="140" border="0" align="center" cellspacing="0" class="identification_tableau">
+    <tr>
+      <td width="128" rowspan="4"><img src="images/cadenas.png" alt="X" width="128" height="128" /></td>
+      <td width="168" height="20" class="identification_hautbas">Identification</td>
+    </tr>
+    <tr>
+      <td height="50"><label>
+        <input name="identifiant" type="text" class="identification_champ" id="identifiant" value="Identifiant..." onfocus="this.value ='';" onchange="verifForm();"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td height="50"><label>
+        <input name="code_secret" type="text" class="identification_champ" id="code_secret" value="Code secret..." onfocus="this.value ='';"  onchange="verifForm();"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td align="center" class="identification_hautbas"><label>
+        <input name="bouton" type="submit" class="identification_bouton" id="bouton" value="Valider" disabled="true"/>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
