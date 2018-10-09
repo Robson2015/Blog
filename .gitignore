@@ -1,0 +1,16 @@
+# Created by https://www.gitignore.io/api/sass
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+.htacess
+
+# End of https://www.gitignore.io/api/sass
+
+/.vscode/
+/gulpfile.js
+/node_modules/
+/package-lock.json
+/package.json
